@@ -1,14 +1,14 @@
 rgs = {
   rg1 = {
     name     = "rg-dhondhu"
-    location = "centralindia"
+    location = "eastus"
   }
 }
 
 vnets = {
   vnet1 = {
     name                = "vnet-dhondhu"
-    location            = "centralindia"
+    location            = "eastus"
     resource_group_name = "rg-dhondhu"
     address_space       = ["10.0.0.0/16"]
   }
@@ -32,7 +32,7 @@ snets = {
 pips = {
   pip1 = {
     name                = "pip1"
-    location            = "centralindia"
+    location            = "eastus"
     resource_group_name = "rg-dhondhu"
     allocation_method   = "Static"
   }
@@ -41,7 +41,7 @@ pips = {
 nics = {
   nic1 = {
     name                 = "dhondhu-nic-1"
-    location             = "centralindia"
+    location             = "eastus"
     resource_group_name  = "rg-dhondhu"
     subnet_name          = "frontend-subnet"
     public_ip_name       = "pip1"
@@ -52,9 +52,9 @@ nics = {
 vms = {
   vm1 = {
     vm_name             = "dhondhu-frontend-vm"
-    location            = "centralindia"
+    location            = "eastus"
     resource_group_name = "rg-dhondhu"
-    size                = "Standard_B1s"
+    size                = "Standard_B1ms"
     admin_username      = "devopsadmin"
     admin_password      = "Dhondhu@123"
     nic_name            = "dhondhu-nic-1"
